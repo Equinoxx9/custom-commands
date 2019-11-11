@@ -1,6 +1,7 @@
 # custom-commands
 Add these lines to .bashrc :
 
+```bash
 git_branch() {
      git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/[\1]/'
 }
@@ -40,3 +41,4 @@ if [ "$PWD" = "/home/user39" ]; then
 	fi
 fi
 clear
+```
