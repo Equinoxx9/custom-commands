@@ -10,7 +10,7 @@ git_color() {
 red=$(tput setaf 1)
 green=$(tput setaf 2)
 yellow=$(tput setaf 3)
-branch=$(git_branch 2>/dev/null | grep "^*" | colrm 1 2)
+branch=$(git branch 2>/dev/null | grep "^*" | colrm 1 2)
 boshka= git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/' > /dev/null 2>&1
 if git rev-parse --git-dir > /dev/null 2>&1; then
     if ! git status | grep "nothing to commit" > /dev/null 2>&1; then
