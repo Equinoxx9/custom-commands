@@ -36,12 +36,13 @@ git_when(){
 }
 
 export PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u\[\033[00m\]:\[\033[01;34m\]'
-# PS1+='$(basename "$PWD")' #Current Directory
-PS1+='\w' #Full Path
+PS1+='$(basename "$PWD")/'
+# PS1+='\w'
 PS1+="\[\033[00m\]" #Small Font
 PS1+="\[\$(git_color)\]\$(git_branch)" #Git Branch
+PS1+="\[\033[01;6m\]" #Big Font
 PS1+="\[\$(git_when_color)\]\$(git_when)" #Git last pull
-PS1+="\[\033[00m\]$ " #Dollar Sign
+PS1+="\[\033[00m\]$ "
 
 #Change Default Terminal Location
 # project_workspace=0
