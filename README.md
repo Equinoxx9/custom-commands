@@ -36,23 +36,24 @@ git_when(){
 }
 
 export PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u\[\033[00m\]:\[\033[01;34m\]'
-# PS1+='$(basename "$PWD")'
-PS1+='\w'
+# PS1+='$(basename "$PWD")' #Current Directory
+PS1+='\w' #Full Path
 PS1+="\[\033[00m\]" #Small Font
 PS1+="\[\$(git_color)\]\$(git_branch)" #Git Branch
 PS1+="\[\$(git_when_color)\]\$(git_when)" #Git last pull
-PS1+="\[\033[00m\]$ "
+PS1+="\[\033[00m\]$ " #Dollar Sign
+
 #Change Default Terminal Location
-project_workspace=0
+# project_workspace=0
 project_path=Desktop/Workspace/spi
-practise_path=Desktop/Practise/ROR/livify
+# practise_path=Desktop/Practise/ROR/livify
 if [ "$PWD" = "/home/user39" ]; then
-	if [ $(wmctrl -d | grep '*' | cut -d ' ' -f1) = $project_workspace ]; then
-		cd  $project_path
-	else
-		cd  $practise_path 
-		code .
-	fi
+	#if [ $(wmctrl -d | grep '*' | cut -d ' ' -f1) = $project_workspace ]; then
+	cd  $project_path
+	#else
+		#cd  $practise_path 
+		#code .
+	#fi
 fi
 clear
 ```
