@@ -58,3 +58,101 @@ if [ "$PWD" = "/home/user39" ]; then
 fi
 clear
 ```
+
+Add these to vscode settings.json:
+```json
+{
+	"workbench.startupEditor": "newUntitledFile",
+	"workbench.iconTheme": "Monokai Pro (Filter Spectrum) Icons",
+	"workbench.colorTheme": "Monokai Pro (Filter Spectrum)",
+	"workbench.enableExperiments": false,
+	"emmet.includeLanguages": {
+	"html.erb": "html",
+	"js.erb": "js"
+	},
+	"emmet.showSuggestionsAsSnippets": true,
+	"editor.wordWrap": "on",
+	"editor.fontSize": 14,
+	"editor.formatOnPaste": true,
+	"editor.formatOnType": true,
+	"editor.tabSize": 2,
+	"files.trimFinalNewlines": true,
+	"gitlens.defaultDateStyle": "absolute",
+	"ruby.codeCompletion": "rcodetools",
+	"ruby.useLanguageServer": true,
+	"ruby.intellisense": "rubyLocate",
+	"terminal.integrated.shell.linux": "/bin/bash",
+	"html.format.indentInnerHtml": true,
+	"editor.fontLigatures": true,
+	"workbench.colorCustomizations": {
+	"editor.selectionBackground": "#6c727977",
+	"editor.selectionHighlightBackground": "#25323ad8"
+	},
+	"debug.internalConsoleOptions": "neverOpen",
+	"workbench.activityBar.visible": true,
+	"explorer.confirmDelete": false,
+	"prettier.jsxBracketSameLine": true,
+	"prettier.useTabs": true,
+	"[javascript]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+	"prettier.singleQuote": true,
+	"prettier.jsxSingleQuote": true,
+	"cSpell.enabledLanguageIds": [
+		"asciidoc",
+		"c",
+		"cpp",
+		"csharp",
+		"css",
+		"git-commit",
+		"go",
+		"handlebars",
+		"haskell",
+		"html",
+		"html.erb",
+		"jade",
+		"java",
+		"javascript",
+		"javascriptreact",
+		"json",
+		"jsonc",
+		"latex",
+		"less",
+		"markdown",
+		"php",
+		"plaintext",
+		"pug",
+		"python",
+		"restructuredtext",
+		"ruby",
+		"rust",
+		"scala",
+		"scss",
+		"text",
+		"typescript",
+		"typescriptreact",
+		"yaml",
+		"yml"
+	],
+	"editor.defaultFormatter": "rebornix.ruby",
+	"ruby.format": "rubocop",
+	"cSpell.userWords": [
+		"readonly",
+		"xlsx"
+	],
+	"visualforce.format.indentInnerHtml": true,
+	"visualforce.trace.server": "verbose",
+	"diffEditor.ignoreTrimWhitespace": false,
+	"files.watcherExclude": {
+	"**/.git/objects/**": true,
+	"**/.git/subtree-cache/**": true,
+	"**/node_modules/**": true,
+	"**/tmp/**": true,
+	"**/.git": true,
+	"**/.svn": true,
+	"**/.hg": true,
+	"**/CVS": true,
+	"**/.DS_Store": true,
+}
+
+```
