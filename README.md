@@ -1,6 +1,6 @@
 # custom-commands
 Add these lines to .bashrc :
-```shell
+```bash
 sudo apt-get install rvm
 ```
 ```bash
