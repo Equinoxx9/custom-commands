@@ -1,6 +1,8 @@
 # custom-commands
 Add these lines to .bashrc :
-
+```shell
+sudo apt-get install rvm
+```
 ```bash
 git_branch() {
      git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/[\1]/'
