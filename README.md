@@ -1,7 +1,7 @@
 # custom-commands
 Add these lines to .bashrc :
-```bash
-sudo apt-get install rvm
+```shell
+bundle install
 ```
 ```bash
 git_branch() {
