@@ -1,8 +1,5 @@
 # custom-commands
 Add these lines to .bashrc :
-```shell
-bundle install
-```
 ```bash
 git_branch() {
      git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/[\1]/'
