@@ -1,5 +1,7 @@
 # custom-commands
-Add these lines to .bashrc :
+Add these lines to .bashrc
+
+For Short Path and git branch:
 ```bash
 git_branch() {
      git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/[\1]/'
@@ -10,12 +12,12 @@ red=$(tput setaf 1)
 green=$(tput setaf 2)
 yellow=$(tput setaf 3)
 branch=$(git branch 2>/dev/null | grep "^*" | colrm 1 2)
-boshka= git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/' > /dev/null 2>&1
+str= git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/' > /dev/null 2>&1
 if git rev-parse --git-dir > /dev/null 2>&1; then
     if ! git status | grep "nothing to commit" > /dev/null 2>&1; then
       echo "${red}"
       return 0
-    elif $boshka; then
+    elif $str; then
 if [ "$branch" = "master" ]; then
   echo "${yellow}"
 else 
@@ -42,8 +44,12 @@ PS1+="\[\$(git_color)\]\$(git_branch)" #Git Branch
 PS1+="\[\033[01;6m\]" #Big Font
 PS1+="\[\$(git_when_color)\]\$(git_when)" #Git last pull
 PS1+="\[\033[00m\]$ "
+```
 
-#Change Default Terminal Location
+
+
+TO Change Default Terminal Location
+```
 # project_workspace=0
 project_path=Desktop/Workspace/spi
 # practise_path=Desktop/Practise/ROR/livify
